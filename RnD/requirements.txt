@@ -1,0 +1,12 @@
+langchain==0.2.0
+langchain-community
+langchain-core
+BeautifulSoup4
+langchain-openai
+sentence-transformers
+langchain-chroma
+nltk
+Unidecode
+textblob
+wordcloud
+pyLDAvis
