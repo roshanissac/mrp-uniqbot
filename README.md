@@ -1,2 +1,1 @@
-# mrp-uniqbot
-MRP Project for MSc Data Science and Analytics Course at Toronto Metropolitan University(TMU)
+# UniQ-Bot: An Advanced LLM-Powered Intelligent Conversational Assistant for Swift and Accurate Frequently Answered Questions (FAQs) Assistance in Universities
