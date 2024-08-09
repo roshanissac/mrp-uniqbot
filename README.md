@@ -26,11 +26,10 @@ The data stored under *Experiments/datasets/* folder,
 3. Final Results Data- *Experiments/datasets/evaluation/results/eval_results.csv*
 
 # Pre-requisites
-
-   Go to the *Experiments/* folder folder of the project and Install the packages/requirements by executing the below command.
+Go to the *Experiments/* folder folder of the project and Install the packages/requirements by executing the below command.
    ```
    pip  install -r requirements.txt
-
+   ```
 # Exploratory Data Analysis(EDA)
 Exploratory Data Analysis of the FAQs data is done in the notebook **EDA.ipynb** under *Experiments/* folder
 
