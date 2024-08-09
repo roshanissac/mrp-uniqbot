@@ -30,9 +30,9 @@ Exploratory Data Analysis of the FAQs data is done in the notebook **EDA.ipynb**
 
 # Experimentation
 Please follow the below steps to replicate the experiments,
-1. Generate Test Data
+## Generate Test Data
 Follow the steps in the notebook **Generate_Test_Data.ipynb** under *Experiments/* folder
-2. Run Experiments
+## Run Experiments
 You have to make sure you have 
 
 
