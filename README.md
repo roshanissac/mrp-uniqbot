@@ -29,14 +29,36 @@ The data stored under *Experiments/datasets/* folder,
 Exploratory Data Analysis of the FAQs data is done in the notebook **EDA.ipynb** under *Experiments/* folder
 
 # Experimentation
-Please follow the below steps to replicate the experiments,You have to make sure you have Hugging Face Key  and Open AI key to do the below steps.
+Please follow the below steps to replicate the experiments,You have to make sure you have Hugging Face Key  and Open AI key(Stored as Colab Secrets) to do the below steps.
 ## 1. Generate Test Data
 Follow the steps in the notebook **Generate_Test_Data.ipynb** under *Experiments/* folder
 ## 2. Run Experiments
 1. To run the experiments,make sure you uploaded the FAQs and Test dataset to appropriate folder in the Google Drive.
+2. Follow the steps in the notebook **Experiments_Hugging_Face_API.ipynb** under *Experiments/* folder
+3. Download the ouput *csv files generated from the notebook. Here we have stored these files under *Experiments/datasets/evaluation/results/files* folder.
+## 3. Analyze and Visualize Results
+Follow the steps in the notebook **Results.ipynb** under *Experiments/* folder
 
+# Running UniQ-Bot
+UniQ-Bot requires Open AI key to run  and should be stored in *.env* file.Please follow below steps.
+## 1. Ingestion Pipeline(Optional)
 
+Follow the steps in the notebook **RAG_UniQBot.ipynb** under *chatbot/* folder to store FAQs data into the ChromaDB vector Store and to test the RAG pipeline. The vector embeddings will be stored under folder *chroma_db/*.
 
+## 2. Run chatbot UI
 
+Follow the below steps to run the chatbot gradio UI interface.
+1. Go to the *chatbot/* folder
+2. Execute the below command
+   ```
+   python main.py
+   ```
+3. You can open the chat Interface by executing below URL in the browser.
+  ```
+  http://127.0.0.1:7860/
+  ```
 
-## Step 
+# References
+1. PyTorch Forecasting:[link](https://pytorch-forecasting.readthedocs.io/en/stable/index.html)
+2. Rossman Sales Dataset:[link](https://www.kaggle.com/competitions/rossmann-store-sales/data)
+
