@@ -29,11 +29,14 @@ The data stored under *Experiments/datasets/* folder,
 Exploratory Data Analysis of the FAQs data is done in the notebook **EDA.ipynb** under *Experiments/* folder
 
 # Experimentation
-Please follow the below steps to replicate the experiments,
-## Generate Test Data
+Please follow the below steps to replicate the experiments,You have to make sure you have Hugging Face Key  and Open AI key to do the below steps.
+## 1. Generate Test Data
 Follow the steps in the notebook **Generate_Test_Data.ipynb** under *Experiments/* folder
-## Run Experiments
-You have to make sure you have 
+## 2. Run Experiments
+1. To run the experiments,make sure you uploaded the FAQs and Test dataset to appropriate folder in the Google Drive.
+
+
+
 
 
 ## Step 
