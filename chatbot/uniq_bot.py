@@ -13,8 +13,11 @@ class UniqBot:
         load_dotenv()
 
         self.llm = ChatOpenAI( 
-                    model="gpt-4o",
-                    temperature=0
+                    model="gpt-4o-mini",
+                    temperature=.1,
+                    max_tokens=500,
+                    verbose=True,
+                    model_kwargs={"top_p":0.5}
                     )
         self.embedding=OpenAIEmbeddings(model="text-embedding-3-large")
 
@@ -32,17 +35,14 @@ class UniqBot:
         self.load_chain()
 
     def load_chain(self):
-        template = """SYSTEM:You are an intelligent assistant helping Toronto Metropolitan University Website visitors 
-        on their frequently asked questions in English.
+        template = """SYSTEM:You are an intelligent assistant helping Toronto Metropolitan University Website visitors on their frequently asked questions in English.
 
         Strictly Use ONLY the following pieces of context to answer the question at the end. Think step-by-step and then answer.
 
-        Do not try to make up an answer
-        if the answer to the question cannot be determined from the context alone or if the context is empty,
+        Do not try to make up an answer:
+        -if the answer to the question cannot be determined from the context alone or if the context is empty,
         only say "I cannot determine the answer to that"
-
-        Use numbered lists whenever possible.
-
+        -Use numbered lists when possible
 
         Context:
         =============
@@ -51,7 +51,7 @@ class UniqBot:
 
         Question: {question}
 
-        Answer:"""
+        Helpful Answer:"""
 
         prompt = PromptTemplate(
             template=template,
@@ -63,10 +63,12 @@ class UniqBot:
             k=3,
             memory_key="chat_history",
             return_messages=True,
+            input_key="question",
             output_key='answer'
         )
 
-        retriever = self.vectordb.as_retriever(search_kwargs={"k": 3,"score_threshold":.40}, search_type="similarity_score_threshold")
+        # retriever = self.vectordb.as_retriever(search_kwargs={"k": 3,"score_threshold":.40}, search_type="similarity_score_threshold")
+        retriever = self.vectordb.as_retriever(search_kwargs={"k": 3}, search_type="similarity")
 
         qa = ConversationalRetrievalChain.from_llm(
         llm=self.llm,
@@ -97,6 +99,9 @@ class UniqBot:
         if any(phrase in result["answer"].lower() for phrase in phrases_to_check):
             return '\nPlease ask a relevant question to UniQ-Bot.'
         else:
-            url_link=result["source_documents"][0].metadata['question_url']
-            url=f"\nView this link for more information: {url_link}"
+            try:
+                url_link=result["source_documents"][0].metadata['question_url']
+                url=f"<br>\n\nView this link for more information: {url_link}"
+            except KeyError:
+                url=""
             return output+url
