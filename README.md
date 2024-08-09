@@ -64,6 +64,6 @@ Follow the below steps to run the chatbot gradio UI interface.
   ```
 
 # References
-1. PyTorch Forecasting:[link](https://pytorch-forecasting.readthedocs.io/en/stable/index.html)
-2. Rossman Sales Dataset:[link](https://www.kaggle.com/competitions/rossmann-store-sales/data)
+1. RAGAS library:[link]([https://pytorch-forecasting.readthedocs.io/en/stable/index.html](https://docs.ragas.io/en/stable/getstarted/index.html))
+2. Langchain :[link]([https://www.kaggle.com/competitions/rossmann-store-sales/data](https://python.langchain.com/v0.2/docs/introduction/))
 
