@@ -15,7 +15,7 @@ seamless integration between LLMs, Embedding models, and vector database. To enh
 information storage and retrieval, ChromaDB vector database is employed. This database will store em-
 beddings that contribute to the contextual understanding and responsiveness of RAG-based systems. UniQ-
 Bot is developed using OpenAI’s ChatGPT-4o-mini LLM and the embedding model text-embedding-3-
-large
+large.
 
 # Data
 For the project, we used a custom data set web-scraped from the Toronto Metropolitan University website. We used the Tool ParseHub to scrape the FAQs from the corresponding web pages of the university. Not all FAQs were selected for this Project, but FAQS from around 32 departments where taken. The dataset consists of 984 rows of FAQs from different departments of the university.
