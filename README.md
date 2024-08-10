@@ -46,7 +46,7 @@ Follow the steps in the notebook **Results.ipynb** under *Experiments/* folder
 
 # Running UniQ-Bot
 UniQ-Bot requires Open AI key to run  and should be stored in *.env* file.Please follow below steps.
-## 1. Ingestion Pipeline(Optional)
+## 1. Ingestion Pipeline
 
 Follow the steps in the notebook **RAG_UniQBot.ipynb** under *chatbot/* folder to store FAQs data into the ChromaDB vector Store and to test the RAG pipeline. The vector embeddings will be stored under folder *chroma_db/*.
 
