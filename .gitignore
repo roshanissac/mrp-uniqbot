@@ -1,5 +1,5 @@
 .env
-__pychache__
+__pycache__
 *.log
-chroma_db
+chroma_db*
 .git

@@ -61,6 +61,12 @@ Follow the below steps to run the chatbot gradio UI interface.
 3. You can open the chat Interface by executing below URL in the browser.
   ```
   http://127.0.0.1:7860/
+  
+  ```
+## 3. UniQBot-POC Link
+  ```
+  https://huggingface.co/spaces/roshanissac/uniqbot
+  
   ```
 
 # References
